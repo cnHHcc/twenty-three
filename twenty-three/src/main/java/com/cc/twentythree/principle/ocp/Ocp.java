@@ -11,7 +11,7 @@ public class Ocp {
         GraphicEditor graphicEditor = new GraphicEditor();
         graphicEditor.drawShape(new Rectangle());
         graphicEditor.drawShape(new Circle());
-        graphicEditor.drawTriangle(new Triangle());
+        graphicEditor.drawShape(new Triangle());
     }
 }
 //一个用于绘图的类
@@ -26,6 +26,8 @@ class GraphicEditor {
             drawRectangle(s);
         } else if (s.m_type == 2) {
             drawCircle(s);
+        } else if (s.m_type ==3 ){
+            drawTriangle(s);
         }
     }
 

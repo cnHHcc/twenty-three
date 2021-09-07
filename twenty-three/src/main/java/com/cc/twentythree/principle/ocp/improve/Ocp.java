@@ -18,7 +18,8 @@ public class Ocp {
 
 
 /**
- * 优点：在需求发生变化时，使用方代码不需要动，服务方现有代码也不需要动，只需要新增一个即可
+ * 优点：在需求发生变化时（增加一个正方形），使用方代码不需要动，服务方现有代码也不需要动，只需要新增一个即可
+ * 使用放不需要关心这个实际的draw方法由谁调用，我们只需要把对应的抽象类的实现类传进去就可以了
  */
 class GraphicEditor {//使用方
     public void drawShape(Shape s) {
@@ -29,14 +30,11 @@ class GraphicEditor {//使用方
 //一下为服务方
 abstract class Shape {//变抽象类
     int m_type;
+    //抽象方法，让子类去重写
     public abstract void draw ();
 }
 
 class Rectangle extends Shape {
-    Rectangle() {
-        super.m_type = 1;
-    }
-
     @Override
     public void draw() {
         System.out.println("矩形");
@@ -44,10 +42,6 @@ class Rectangle extends Shape {
 }
 
 class Circle extends Shape {
-    Circle() {
-        super.m_type = 2;
-    }
-
     @Override
     public void draw() {
         System.out.println("圆形");
@@ -55,19 +49,12 @@ class Circle extends Shape {
 }
 
 class Triangle extends Shape {
-    Triangle() {
-        super.m_type = 3;
-    }
-
     @Override
     public void draw() {
         System.out.println("三角形");
     }
 }
 class Quadrate extends Shape {
-    Quadrate() {
-        super.m_type = 4;
-    }
     @Override
     public void draw() {
         System.out.println("正方形");

@@ -42,6 +42,7 @@ class CollegeManager {
             CollegeEmployee emp = new CollegeEmployee();
             emp.setId("学院员工id="+i);
             list.add(emp);
+            System.out.println(1);
         }
         return list;
     }

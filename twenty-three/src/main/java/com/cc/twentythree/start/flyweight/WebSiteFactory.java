@@ -28,7 +28,6 @@ public class WebSiteFactory {
          * 而当外部调用这个方法的时候，得到的是WebSite对象，其实是由ConcreteWebSite向上转型的结果，这样，调用WebSite的use()方法时，
          * 指向的是子类ConcreteWebSite重写后的use()方法
          */
-
         return pool.get(type);
     }
 

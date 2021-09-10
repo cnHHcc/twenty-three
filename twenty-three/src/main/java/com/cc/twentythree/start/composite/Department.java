@@ -8,7 +8,6 @@ import lombok.EqualsAndHashCode;
  * @version V1.0
  * @date 2021/9/9 9:26
  */
-@EqualsAndHashCode(callSuper = true)
 public class Department extends OrgComponent{
     public Department(String name, String des) {
         super(name, des);
